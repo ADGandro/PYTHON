@@ -1,17 +1,23 @@
-def login(username, password):
-    if len(password) < 8:
-        return "Password must be at least 8 characters long."
-    
-    if username == "kobe2bbryant123456789@gmail.com" and password == "Andrikuz":
-        return "Login successful!"
-    elif username == "static_username":
-        return "Incorrect password. Try again."
-    elif password == "static_password":
-        return "Incorrect username. Try again."
-    else:
-        return "Tinky Winky"
+import random
 
-username = input("Enter username: ")
-password = input("Enter password: ")
 
-print(login(username, password))
+a = random.randint(1, 100)
+b = random.randint(1, 100)
+
+print("a:", a)
+print("b:", b)
+
+if a % 2 == 0 and b % 2 == 0:
+    result = a ** b
+    print("a ** b =", result)
+
+
+elif a % 2 == 0 and b % 2 != 0:
+    result = a * b
+    print("a * b =", result) 
+
+elif a % 2 != 0 and b % 2 != 0:
+    c = random.randint(1, 100)
+    print("c", c)
+    result = a * b * c
+    print("a * b * c =", result)
